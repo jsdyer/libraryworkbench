@@ -576,5 +576,17 @@
   ],
   "count": 54,
   "coverage": "NS 2019-2020 to 2024-2025 · Vancouver 2023–24",
+  "documents": [
+    {
+      "url": "https://www.vpl.ca/sites/default/files/2025-04/VPL%20Annual%20Statistics%202024%20FINAL.pdf",
+      "verified": "2026-11-19",
+      "status": "Verified"
+    },
+    {
+      "url": "https://www2.halifaxpubliclibraries.ca/archives/annual-reports/2024-25/Annual-Report-2024-25-Infographic-11x7.25-DEC2025_Digital.pdf",
+      "verified": "2026-11-19",
+      "status": "Verified"
+    }
+  ],
   "retrieved": "2026-11-19"
 }

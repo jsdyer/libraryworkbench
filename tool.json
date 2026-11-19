@@ -21,7 +21,7 @@
     "cadence": "Monthly",
     "probes": [
       {
-        "label": "Data retrieved",
+        "label": "Survey retrieved",
         "url": "https://coolcode.ca/libraryworkbench/data/edition.json",
         "path": [
           "retrieved"

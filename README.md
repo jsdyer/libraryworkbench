@@ -17,6 +17,6 @@ Choose a recording or digitization task to see the equipment, what to bring, and
 
 ## Refresh and development
 
-The monthly workflow downloads the current provincial survey, checks region-year uniqueness, preserves missing measures and checks the fingerprints of the two reviewed report PDFs before publishing. The retrieval date applies to these data sources. Equipment summaries are reviewed separately when a library changes a service. Neither user selections nor bookings are submitted by this tool. Booking links open the relevant library.
+The monthly workflow downloads the current provincial survey, checks region-year uniqueness, preserves missing measures and checks the fingerprints of the two reviewed report PDFs before publishing. The catalogue date tracks the survey pull. A report that blocks a scheduled download or changes its content keeps its last verified date and a visible status in the corresponding section. Its reviewed figures remain available while the survey updates independently. Equipment summaries are reviewed separately when a library changes a service. Neither user selections nor bookings are submitted by this tool. Booking links open the relevant library.
 
 Run `python3 scripts/refresh.py` to retrieve data, `node --test tests/*.test.mjs` and `python3 -m unittest discover -s tests` to check it, then `python3 scripts/build.py` to build offline. Serve `dist/` locally. With Playwright Chromium installed, `python3 tests/browser_smoke.py` exercises the deployed layout.

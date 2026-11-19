@@ -2,6 +2,11 @@ import {$, node, link, options, table, load} from './ui.mjs';
 import {servicesFor, labRows, surveyComparison} from './model.mjs';
 const fmt = value => value == null ? 'Unreported' : value.toLocaleString('en-CA');
 load(data => {
+  $('metadata').textContent = data.coverage + ' · Provincial survey retrieved ' + data.retrieved;
+  for (const [id, url] of [['vplstatus', data.vplSource], ['hplstatus', data.hplSource]]) {
+    const record = data.documents?.find(doc => doc.url === url.split('#')[0]);
+    if (record) $(id).textContent = 'Report last verified ' + record.verified + ' · ' + record.status;
+  }
   options('task', [...new Set(data.services.map(row => row.task))], 'VHS tape');
   options('city', ['Both cities','Halifax','Vancouver']);
   options('lab', ['Central','Bud Osborn']);

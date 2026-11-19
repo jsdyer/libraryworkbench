@@ -24,21 +24,38 @@ def retrieve(url):
             sleep(2 ** attempt)
 
 
-def verify(source):
-    if sha256(retrieve(source["url"])).hexdigest() != source["sha256"]:
-        raise ValueError("A reviewed document changed. Inspect the source and transcription: " + source["url"])
+def check_document(source, previous, today):
+    """Keep the latest known-good access date for a fixed, reviewed publication."""
+    try:
+        raw = retrieve(source["url"])
+    except OSError as error:
+        if source["url"] not in previous:
+            raise
+        print(f"Source unavailable ({error}): {source['url']}")
+        return {**previous[source["url"]], "status": "Source unavailable on last check"}
+    if sha256(raw).hexdigest() != source["sha256"]:
+        if source["url"] not in previous:
+            raise ValueError("Review this publication before including it: " + source["url"])
+        print("Source changed. Check the published transcription: " + source["url"])
+        return {**previous[source["url"]], "status": "Source changed; transcription awaits review"}
+    return {"url": source["url"], "verified": today, "status": "Verified"}
 
 
 def refresh():
+    today = datetime.now(timezone.utc).date().isoformat()
     documents = json.loads((SOURCES / "documents.json").read_text())
-    with ThreadPoolExecutor(max_workers=3) as pool:
-        list(pool.map(verify, documents))
+    old = json.loads(EDITION.read_text()) if EDITION.exists() else {}
+    previous = {doc["url"]: doc for doc in old.get("documents", [])}
     edition = json.loads((SOURCES / "records.json").read_text())
     update(edition)
-    edition["retrieved"] = datetime.now(timezone.utc).date().isoformat()
+    with ThreadPoolExecutor(max_workers=2) as pool:
+        edition["documents"] = list(pool.map(lambda doc: check_document(doc, previous, today), documents))
+    edition["retrieved"] = today
     temp = EDITION.with_suffix(".tmp")
     temp.write_text(json.dumps(edition, ensure_ascii=False, indent=2) + "\n")
     temp.replace(EDITION)
+
+
 SURVEY = "https://data.novascotia.ca/resource/tnu4-55e9.json"
 MEASURES = ("hours_open", "programs", "program_attendance", "annual_in_person_visits")
 
