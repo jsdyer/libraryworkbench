@@ -71,6 +71,30 @@
       "bring": "Bring your physical library card. Watch the orientation videos before your first session.",
       "guide": "https://www.halifaxpubliclibraries.ca/library-spaces/book-a-space/media-studio/",
       "booking": "https://www.halifaxpubliclibraries.ca/library-spaces/book-a-space/media-studio/booking-request-form/"
+    },
+    {
+      "city": "Vancouver",
+      "task": "Regular 8 or Super 8 film",
+      "equipment": "Central lists a Kodak film-reel scanner for Regular 8 and Super 8 film.",
+      "bring": "Contact the Inspiration Lab in advance to arrange a time. Bring the film reel and ask about the output media.",
+      "guide": "https://www.vpl.ca/branches/central/level-3/inspiration-lab",
+      "booking": "https://www.vpl.ca/branches/central/level-3/inspiration-lab"
+    },
+    {
+      "city": "Vancouver",
+      "task": "Reel-to-reel audio",
+      "equipment": "Central lists a stereo quarter-inch reel-to-reel audio transfer station.",
+      "bring": "Contact the Inspiration Lab in advance. Tell staff the tape format when arranging your booking.",
+      "guide": "https://www.vpl.ca/branches/central/level-3/inspiration-lab",
+      "booking": "https://www.vpl.ca/branches/central/level-3/inspiration-lab"
+    },
+    {
+      "city": "Vancouver",
+      "task": "3½-inch floppy disk",
+      "equipment": "Central lists a USB drive for 3½-inch floppy disks.",
+      "bring": "Bring the disk and storage for copied files. Ask staff about disk and file-format compatibility.",
+      "guide": "https://www.vpl.ca/branches/central/level-3/inspiration-lab",
+      "booking": "https://www.vpl.ca/branches/central/level-3/inspiration-lab"
     }
   ],
   "labs": [
