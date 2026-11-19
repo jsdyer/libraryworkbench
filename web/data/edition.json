@@ -95,6 +95,56 @@
       "bring": "Bring the disk and storage for copied files. Ask staff about disk and file-format compatibility.",
       "guide": "https://www.vpl.ca/branches/central/level-3/inspiration-lab",
       "booking": "https://www.vpl.ca/branches/central/level-3/inspiration-lab"
+    },
+    {
+      "city": "Halifax",
+      "task": "3D print",
+      "facility": "Lou Duggan Creative Studio",
+      "equipment": "Two Prusa printers use PLA filament. The library describes a free service for jobs under two hours.",
+      "bring": "Bring an STL model or attend a design workshop. Check the program schedule before visiting.",
+      "guide": "https://www.halifaxpubliclibraries.ca/library-spaces/use-of-space/lou-duggan-creative-studio/",
+      "booking": "https://halifax.bibliocommons.com/v2/events?q=lou+duggan+creative+studio",
+      "action": "Find scheduled programs"
+    },
+    {
+      "city": "Halifax",
+      "task": "Mend or sew",
+      "facility": "Lou Duggan Creative Studio",
+      "equipment": "The studio lists sewing machines, a serger, mini mending looms and an ironing board.",
+      "bring": "Bring the item to mend to a suitable scheduled program. Check which equipment will be available.",
+      "guide": "https://www.halifaxpubliclibraries.ca/library-spaces/use-of-space/lou-duggan-creative-studio/",
+      "booking": "https://halifax.bibliocommons.com/v2/events?q=lou+duggan+creative+studio",
+      "action": "Find scheduled programs"
+    },
+    {
+      "city": "Halifax",
+      "task": "Cut a vinyl design",
+      "facility": "Lou Duggan Creative Studio",
+      "equipment": "Cricut cutters and an EasyPress are available during relevant programs.",
+      "bring": "Check the program description for materials before you visit.",
+      "guide": "https://www.halifaxpubliclibraries.ca/library-spaces/use-of-space/lou-duggan-creative-studio/",
+      "booking": "https://halifax.bibliocommons.com/v2/events?q=lou+duggan+creative+studio",
+      "action": "Find scheduled programs"
+    },
+    {
+      "city": "Richmond",
+      "task": "3D print",
+      "facility": "Brighouse Launchpad",
+      "equipment": "The Brighouse Launchpad offers Ultimaker printers with model-specific limits of 8 or 16 hours.",
+      "bring": "Get a Richmond Public Library card and complete printer training. Check the current price and printer availability.",
+      "guide": "https://www.yourlibrary.ca/creation-stations/",
+      "booking": "https://www.yourlibrary.ca/creation-stations/help1on1/",
+      "action": "Request one-on-one help"
+    },
+    {
+      "city": "Richmond",
+      "task": "Cut a vinyl design",
+      "facility": "Brighouse Launchpad",
+      "equipment": "The Launchpad lists Cricut cutting machines and heat presses.",
+      "bring": "Check the creation station instructions for training and materials before bringing your design.",
+      "guide": "https://www.yourlibrary.ca/creation-stations/",
+      "booking": "https://www.yourlibrary.ca/creation-stations/help1on1/",
+      "action": "Request one-on-one help"
     }
   ],
   "labs": [

@@ -1,14 +1,16 @@
 {
   "id": "libraryworkbench",
   "title": "Library Workbench",
-  "description": "Match a tape to a Vancouver lab station, estimate transfer time and storage, and compare library use in Vancouver and Nova Scotia.",
+  "description": "Check whether a 3D print fits Halifax or Richmond library limits, estimate Richmond’s fee, or plan a Vancouver tape transfer.",
   "category": "places",
   "tags": [
     "libraries",
     "Halifax",
     "Vancouver",
     "digitization",
-    "program attendance"
+    "program attendance",
+    "Richmond",
+    "3D printing"
   ],
   "icon": "library-big",
   "url": "/libraryworkbench/",
@@ -17,7 +19,7 @@
   "access": "browser",
   "data_info": {
     "mode": "snapshot",
-    "detail": "Library equipment and transfer guides, Vancouver lab activity and Nova Scotia’s regional library survey supply the estimates and comparisons.",
+    "detail": "Library equipment guides, Vancouver usage reports and the Nova Scotia library survey supply the project planners and comparisons.",
     "cadence": "Monthly",
     "probes": [
       {

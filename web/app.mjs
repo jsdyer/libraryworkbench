@@ -1,3 +1,4 @@
+import {printPlan} from './print.mjs';
 import {$, node, link, options, table, load} from './ui.mjs';
 import {servicesFor, labRows, surveyComparison} from './model.mjs';
 import {formats, equipmentFor, tapeEstimate} from './tapes.mjs';
@@ -9,7 +10,7 @@ load(data => {
     if (record) $(id).textContent = 'Report last verified ' + record.verified + ' · ' + record.status;
   }
   options('task', [...new Set(data.services.map(row => row.task))], 'VHS tape');
-  options('city', ['Both cities','Halifax','Vancouver']);
+  options('city', ['All locations','Halifax','Richmond','Vancouver']);
   options('lab', ['Central','Bud Osborn']);
   options('measure', ['Hours of use','Sessions','Minutes per session']);
   const regions = [...new Set(data.survey.map(row => row.region))].sort();
@@ -20,12 +21,23 @@ load(data => {
     $('services').replaceChildren(...results.map(r => {
       const box = node('article', undefined, 'card');
       const links = node('div', undefined, 'links');
-      links.append(link('Equipment guide ↗', r.guide), link('Booking at the library ↗', r.booking));
-      box.append(node('p',r.city,'minitag'),node('h3', r.city === 'Vancouver' ? 'Central Inspiration Lab' : 'Central Media Studio'),node('p',r.equipment),node('p',r.bring),links);
+      links.append(link('Equipment guide ↗', r.guide), link((r.action || 'Booking at the library') + ' ↗', r.booking));
+      box.append(node('p',r.city,'minitag'),node('h3', r.facility || (r.city === 'Vancouver' ? 'Central Inspiration Lab' : 'Central Media Studio')),node('p',r.equipment),node('p',r.bring),links);
       return box;
     }));
-    if (!results.length) $('services').append(node('p','This project has no verified equipment listing for your selection. Check both cities for other options.','callout'));
+    if (!results.length) $('services').append(node('p','This project has no verified equipment listing for your selection. Check all locations for other options.','callout'));
   }
+  function printEstimate() {
+    const plan = printPlan($('print-minutes').value, $('print-grams').value);
+    const currency = value => value.toLocaleString('en-CA',{style:'currency',currency:'CAD'});
+    $('halifax-fit').textContent = !plan ? 'Enter a positive time and weight' : plan.halifax ? 'Within the published time limit' : 'Exceeds the under-two-hour limit';
+    $('richmond-fit').textContent = !plan ? 'Waiting for an estimate' : plan.richmond || 'Exceeds both printer limits';
+    $('richmond-price').textContent = plan?.richmond
+      ? 'Estimated CAD ' + currency(plan.cost) + ' = $2 service fee + ' + currency(plan.material) + ' filament + ' + currency(plan.time) + ' printing time. Partial hours are prorated here. Confirm the actual charge with the library.'
+      : 'The 2+ printers allow up to 8 hours. The S7 allows up to 16 hours. A Richmond card and training are required.';
+  }
+  $('print-minutes').oninput = $('print-grams').oninput = printEstimate;
+  printEstimate();
   options('tape-format', Object.keys(formats), 'VHS');
   options('video-standard', ['NTSC', 'PAL', 'Unknown'], 'NTSC');
   function planner() {

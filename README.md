@@ -5,8 +5,12 @@
 Pick a project such as transferring a VHS tape. See which equipment the central libraries in Halifax and Vancouver describe, what to bring, and where the library takes bookings. Historical use and attendance sit beside the practical directory.
 
 <!-- coolcode:guide -->
-Try a PAL Hi8 cassette in the Vancouver transfer planner. Enter 60, 90, 45 for three tapes to see 3 h 15 min of real-time copying and roughly 13 GB of storage before setup and saving. Explore Regular 8 film, quarter-inch audio reels or floppy disks in the equipment directory. In the activity table, minutes per session relates reported hours to sessions. Select Halifax in 2024–25 to compare its survey and annual-report figures.
+Enter 90 minutes and 30 grams in the 3D print planner. This fits Halifax’s published under-two-hour service and gives a CAD $6.50 estimate in Richmond. At 120 minutes, only the Richmond option meets the published time limit. Try a PAL Hi8 cassette in the Vancouver transfer planner. Enter 60, 90, 45 for three tapes to see 3 h 15 min of real-time copying and roughly 13 GB of storage before setup and saving. Explore Regular 8 film, quarter-inch audio reels or floppy disks in the equipment directory. In the activity table, minutes per session relates reported hours to sessions. Select Halifax in 2024–25 to compare its survey and annual-report figures.
 <!-- /coolcode:guide -->
+
+## Makerspace projects
+
+Compare a slicer’s time and material estimate with [Halifax Central’s published print guidance](https://www.halifaxpubliclibraries.ca/blogs/post/how-to-get-started-with-3d-printing/) and [Richmond’s Creation Stations](https://www.yourlibrary.ca/creation-stations/). Richmond charges $2 per job, $0.10 per gram and $1 per hour. The estimate prorates partial hours. The equipment directory includes sewing and Cricut projects during [Halifax studio programs](https://www.halifaxpubliclibraries.ca/library-spaces/use-of-space/lou-duggan-creative-studio/), plus Richmond’s Brighouse Launchpad. The library handles training, jobs and program schedules.
 
 ## Transfer estimates
 

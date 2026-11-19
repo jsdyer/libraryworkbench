@@ -1,5 +1,5 @@
 export function servicesFor(services, task, city) {
-  return services.filter(row => row.task === task && (city === 'Both cities' || row.city === city));
+  return services.filter(row => row.task === task && (city === 'All locations' || city === 'Both cities' && ['Vancouver','Halifax'].includes(row.city) || row.city === city));
 }
 export function labRows(labs, lab, measure) {
   const selected = labs.filter(row => row.lab === lab);

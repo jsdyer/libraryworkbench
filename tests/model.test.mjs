@@ -35,3 +35,13 @@ test('Closed facilities have an undefined average, other rows use hours over ses
   assert.equal(studios.later, 60 * 10499 / 4483);
   assert.equal(servicesFor(data.services, 'Regular 8 or Super 8 film', 'Vancouver').length, 1);
 });
+
+import {printPlan} from '../web/print.mjs';
+test('Richmond estimates and the Halifax strict time limit', () => {
+  assert.equal(printPlan(90,30).cost, 6.50);
+  assert.equal(printPlan(119,30).halifax,true);
+  assert.equal(printPlan(120,30).halifax,false);
+  assert.equal(printPlan(481,30).richmond,'Ultimaker S7 only');
+  assert.equal(printPlan(961,30).richmond,'');
+  assert.equal(printPlan(-1,30),null);
+});
