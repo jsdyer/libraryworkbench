@@ -5,9 +5,15 @@ export function labRows(labs, lab, measure) {
   const selected = labs.filter(row => row.lab === lab);
   return [...new Set(selected.map(row => row.activity))].map(activity => {
     const records = selected.filter(row => row.activity === activity);
-    const earlier = records.find(row => row.year === 2023)[measure];
-    const later = records.find(row => row.year === 2024)[measure];
-    return {activity, earlier, later, change: later - earlier};
+    function value(year) {
+      const row = records.find(row => row.year === year);
+      if (!row) return null;
+      if (measure === 'minutes') return row.sessions > 0 ? 60 * row.hours / row.sessions : null;
+      return row[measure];
+    }
+    const earlier = value(2023);
+    const later = value(2024);
+    return {activity, earlier, later, change: earlier == null || later == null ? null : later - earlier};
   });
 }
 export function surveyComparison(data, region, year) {

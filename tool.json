@@ -1,7 +1,7 @@
 {
   "id": "libraryworkbench",
   "title": "Library Workbench",
-  "description": "Find a library workspace for a tape, recording or scan, then explore how Vancouver and Nova Scotia report library use.",
+  "description": "Match a tape to a Vancouver lab station, estimate transfer time and storage, and compare library use in Vancouver and Nova Scotia.",
   "category": "places",
   "tags": [
     "libraries",
@@ -17,7 +17,7 @@
   "access": "browser",
   "data_info": {
     "mode": "snapshot",
-    "detail": "Halifax and Vancouver equipment guides, Vancouver’s 2023–24 lab use, and a regional survey of Nova Scotia libraries.",
+    "detail": "Library equipment and transfer guides, Vancouver lab activity and Nova Scotia’s regional library survey supply the estimates and comparisons.",
     "cadence": "Monthly",
     "probes": [
       {

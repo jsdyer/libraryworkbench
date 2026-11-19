@@ -6,7 +6,16 @@
 <section><h2>What do you want to make?</h2>
 <div class="controls"><label>Project<select id="task"></select></label><label>Location<select id="city"></select></label></div>
 <div class="results" id="services" aria-live="polite"></div></section>
-<section><h2>Inside Vancouver’s Inspiration Labs</h2><p>Compare two years of activity at a lab. A session counts a use of the facility. Hours measure time used.</p>
+<section id="tape-planner"><h2>Plan a tape transfer in Vancouver</h2>
+<p>Read the format on the cassette or original camera. Check which Central Inspiration Lab station can play it, then estimate the time and storage for a batch of that format.</p>
+<div class="controls"><label>Tape format<select id="tape-format"></select></label><label>Video standard<select id="video-standard"></select></label>
+<label>Running times, in minutes or h:mm<input id="durations" value="60, 90, 45" type="text" aria-describedby="duration-hint" maxlength="1000"></label></div>
+<p id="duration-hint">Separate tapes with commas. Use the minutes of material you want to copy from each tape.</p>
+<div id="transfer-results" class="results" aria-live="polite">
+<article class="card"><p class="minitag">Vancouver Central</p><h3 id="station-name"></h3><p id="station-detail"></p><a href="https://www.vpl.ca/branches/central/level-3/inspiration-lab">Equipment and booking ↗</a></article>
+<article class="card"><p class="minitag">Capture estimate</p><h3 id="capture-time"></h3><p id="capture-storage"></p><p id="capture-limit"></p><a href="https://www.vpl.ca/guides/inspiration-lab-digitization/video-digitization">VPL transfer and storage guide ↗</a></article></div>
+<p>Equipment reviewed 19 November 2026. Halifax Central lists a VHS digitization cart. Ask the Media Studio about your exact format and video standard. <a href="https://www.halifaxpubliclibraries.ca/library-spaces/book-a-space/media-studio/">Halifax equipment and bookings ↗</a></p></section>
+<section id="lab-use"><h2>Inside Vancouver’s Inspiration Labs</h2><p>Compare two years of activity at a lab. A session counts a use of the facility. Hours measure time used.</p>
 <div class="controls"><label>Lab<select id="lab"></select></label><label>Measure<select id="measure"></select></label></div>
 <div id="labtable" class="tablewrap" aria-live="polite"></div><p id="labnote"></p><a id="vplsrc">Read the published charts · printed page 11 ↗</a><p class="meta" id="vplstatus"></p></section>
 <section><h2>What did the libraries count?</h2><p>Choose a regional library system and fiscal year from Nova Scotia’s survey. The year runs April through March.</p>

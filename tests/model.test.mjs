@@ -14,3 +14,24 @@ test('City and equipment filters combine',()=>{
   assert.equal(servicesFor(data.services,'VHS tape','Both cities').length,2);
   assert.equal(servicesFor(data.services,'Camcorder tape','Halifax').length,0);
 });
+
+import {equipmentFor, tapeEstimate} from '../web/tapes.mjs';
+test('Tape compatibility follows the deck, cassette and television standard', () => {
+  assert.equal(equipmentFor('VHS-C', 'PAL').heading, 'Ask about an alternative player');
+  assert.equal(equipmentFor('VHS', 'Unknown').heading, 'Check the video standard');
+  assert.equal(equipmentFor('Video8 / Hi8 / Digital8', 'PAL').heading, '8 mm camcorder station');
+  assert.equal(equipmentFor('Video8 / Hi8 / Digital8', 'Unknown').heading, '8 mm camcorder station');
+  assert.equal(equipmentFor('Other or unidentified cassette', 'NTSC').heading, 'Identify the tape and player');
+});
+test('Batch runtime and approximate storage reject partial or malformed durations', () => {
+  assert.deepEqual(tapeEstimate('60, 1:30, 45'), {count: 3, total: 195, gb: 13, longest: 90});
+  for (const input of ['', '60,', '1:99', '-1', '0,1', '7abc', '1:5', '99999999999999999999'])
+    assert.equal(tapeEstimate(input), null);
+});
+test('Closed facilities have an undefined average, other rows use hours over sessions', () => {
+  const studios = labRows(data.labs, 'Central', 'minutes')[0];
+  assert.equal(studios.earlier, null);
+  assert.equal(studios.change, null);
+  assert.equal(studios.later, 60 * 10499 / 4483);
+  assert.equal(servicesFor(data.services, 'Regular 8 or Super 8 film', 'Vancouver').length, 1);
+});
