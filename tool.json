@@ -1,16 +1,38 @@
 {
-  "id": "coolcode-tool-template",
-  "title": "CoolCode Tool Starter",
-  "description": "A browser-only example that trims lines and removes exact duplicates.",
-  "category": "security",
-  "tags": ["text", "lines", "duplicates"],
-  "icon": "scan-search",
-  "url": "/coolcode-tool-template/",
-  "source": "https://github.com/jsdyer/coolcode-tool-template",
+  "id": "libraryworkbench",
+  "title": "Library Workbench",
+  "description": "Find a library workspace for a tape, recording or scan, then explore how Vancouver and Nova Scotia report library use.",
+  "category": "places",
+  "tags": [
+    "libraries",
+    "Halifax",
+    "Vancouver",
+    "digitization",
+    "program attendance"
+  ],
+  "icon": "library-big",
+  "url": "/libraryworkbench/",
+  "source": "https://github.com/jsdyer/libraryworkbench",
   "hosting": "project",
   "access": "browser",
   "data_info": {
-    "mode": "local",
-    "detail": "The browser reads the text you paste and compares its lines."
+    "mode": "snapshot",
+    "detail": "Halifax and Vancouver equipment guides, Vancouver’s 2023–24 lab use, and a regional survey of Nova Scotia libraries.",
+    "cadence": "Monthly",
+    "probes": [
+      {
+        "label": "Data retrieved",
+        "url": "https://coolcode.ca/libraryworkbench/data/edition.json",
+        "path": [
+          "retrieved"
+        ],
+        "count_at": {
+          "path": [
+            "count"
+          ],
+          "unit": "library-region years"
+        }
+      }
+    ]
   }
 }

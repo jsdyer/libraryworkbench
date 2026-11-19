@@ -1,0 +1,580 @@
+{
+  "services": [
+    {
+      "city": "Vancouver",
+      "task": "VHS tape",
+      "equipment": "The lab supplies a VCR for North American NTSC VHS.",
+      "bring": "Bring the tape and storage. Allow its running time plus setup and saving time. VPL recommends exFAT for individual files over 4 GB.",
+      "guide": "https://www.vpl.ca/guides/inspiration-lab-digitization/video-digitization",
+      "booking": "https://www.vpl.ca/branches/central/level-3/inspiration-lab"
+    },
+    {
+      "city": "Halifax",
+      "task": "VHS tape",
+      "equipment": "Central Library’s digitization cart converts VHS tapes. The equipment page does not specify NTSC/PAL or compact adapters.",
+      "bring": "Bring your tape and physical library card. Ask about your exact format and file storage when requesting the cart.",
+      "guide": "https://www.halifaxpubliclibraries.ca/library-spaces/book-a-space/media-studio/",
+      "booking": "https://www.halifaxpubliclibraries.ca/library-spaces/book-a-space/media-studio/booking-request-form/"
+    },
+    {
+      "city": "Vancouver",
+      "task": "Camcorder tape",
+      "equipment": "Staff have MiniDV and 8 mm camcorder kits. The capture connection also accepts RCA or S-Video from a compatible camera.",
+      "bring": "Bring the tape and storage. If using your camera, bring its power supply and connecting cables.",
+      "guide": "https://www.vpl.ca/guides/inspiration-lab-digitization/video-digitization",
+      "booking": "https://www.vpl.ca/branches/central/level-3/inspiration-lab"
+    },
+    {
+      "city": "Vancouver",
+      "task": "Audio cassette",
+      "equipment": "Central’s audio digitization station plays cassettes.",
+      "bring": "Bring your cassette and storage for your digital copy.",
+      "guide": "https://www.vpl.ca/guides/inspiration-lab-digitization/audio-digitization",
+      "booking": "https://www.vpl.ca/branches/central/level-3/inspiration-lab"
+    },
+    {
+      "city": "Halifax",
+      "task": "Audio cassette",
+      "equipment": "Central’s digitization cart can transfer audio cassettes.",
+      "bring": "Bring your cassette and physical library card. Include the format in your booking request.",
+      "guide": "https://www.halifaxpubliclibraries.ca/library-spaces/book-a-space/media-studio/",
+      "booking": "https://www.halifaxpubliclibraries.ca/library-spaces/book-a-space/media-studio/booking-request-form/"
+    },
+    {
+      "city": "Halifax",
+      "task": "Vinyl record",
+      "equipment": "Central’s digitization cart can transfer records.",
+      "bring": "Bring the record and physical library card. Ask staff about the file output and storage you need.",
+      "guide": "https://www.halifaxpubliclibraries.ca/library-spaces/book-a-space/media-studio/",
+      "booking": "https://www.halifaxpubliclibraries.ca/library-spaces/book-a-space/media-studio/booking-request-form/"
+    },
+    {
+      "city": "Vancouver",
+      "task": "Photo, slide or negative",
+      "equipment": "The Inspiration Lab provides an Epson flatbed scanning station.",
+      "bring": "Bring the originals and storage. Consult the image guide for holders and supported film sizes.",
+      "guide": "https://www.vpl.ca/guides/inspiration-lab-digitization/photo-and-image-digitization",
+      "booking": "https://www.vpl.ca/branches/central/level-3/inspiration-lab"
+    },
+    {
+      "city": "Vancouver",
+      "task": "Record audio",
+      "equipment": "Book a sound booth at Central. The booking page describes the equipment in each room.",
+      "bring": "Choose your booth and bring storage for your recording.",
+      "guide": "https://www.vpl.ca/branches/central/level-3/inspiration-lab",
+      "booking": "https://www.vpl.ca/branches/central/level-3/inspiration-lab"
+    },
+    {
+      "city": "Halifax",
+      "task": "Record audio",
+      "equipment": "Central’s Media Studio offers recording space, microphones and audio editing software.",
+      "bring": "Bring your physical library card. Watch the orientation videos before your first session.",
+      "guide": "https://www.halifaxpubliclibraries.ca/library-spaces/book-a-space/media-studio/",
+      "booking": "https://www.halifaxpubliclibraries.ca/library-spaces/book-a-space/media-studio/booking-request-form/"
+    }
+  ],
+  "labs": [
+    {
+      "lab": "Central",
+      "activity": "Recording studios",
+      "year": 2023,
+      "hours": 0,
+      "sessions": 0
+    },
+    {
+      "lab": "Central",
+      "activity": "Recording studios",
+      "year": 2024,
+      "hours": 10499,
+      "sessions": 4483
+    },
+    {
+      "lab": "Central",
+      "activity": "Digitization / creation stations",
+      "year": 2023,
+      "hours": 16385,
+      "sessions": 11795
+    },
+    {
+      "lab": "Central",
+      "activity": "Digitization / creation stations",
+      "year": 2024,
+      "hours": 18065,
+      "sessions": 12371
+    },
+    {
+      "lab": "Bud Osborn",
+      "activity": "Recording studios",
+      "year": 2023,
+      "hours": 279,
+      "sessions": 245
+    },
+    {
+      "lab": "Bud Osborn",
+      "activity": "Recording studios",
+      "year": 2024,
+      "hours": 633,
+      "sessions": 375
+    },
+    {
+      "lab": "Bud Osborn",
+      "activity": "Digitization / creation stations",
+      "year": 2023,
+      "hours": 699,
+      "sessions": 737
+    },
+    {
+      "lab": "Bud Osborn",
+      "activity": "Digitization / creation stations",
+      "year": 2024,
+      "hours": 582,
+      "sessions": 346
+    }
+  ],
+  "hpl": {
+    "year": "2024-2025",
+    "hours_open": 37227,
+    "programs": 10063,
+    "program_attendance": 229035
+  },
+  "vplSource": "https://www.vpl.ca/sites/default/files/2025-04/VPL%20Annual%20Statistics%202024%20FINAL.pdf#page=12",
+  "hplSource": "https://www2.halifaxpubliclibraries.ca/archives/annual-reports/2024-25/Annual-Report-2024-25-Infographic-11x7.25-DEC2025_Digital.pdf",
+  "nsSource": "https://data.novascotia.ca/d/tnu4-55e9",
+  "survey": [
+    {
+      "region": "Annapolis Valley Regional Library",
+      "year": "2019-2020",
+      "hours_open": 17561.5,
+      "programs": 2656.0,
+      "program_attendance": 20966.0,
+      "annual_in_person_visits": 261603.0
+    },
+    {
+      "region": "Annapolis Valley Regional Library",
+      "year": "2020-2021",
+      "hours_open": 11822.0,
+      "programs": 536.0,
+      "program_attendance": 5557.0,
+      "annual_in_person_visits": 92484.0
+    },
+    {
+      "region": "Annapolis Valley Regional Library",
+      "year": "2021-2022",
+      "hours_open": 15329.0,
+      "programs": 999.0,
+      "program_attendance": 15974.0,
+      "annual_in_person_visits": 144667.0
+    },
+    {
+      "region": "Annapolis Valley Regional Library",
+      "year": "2022-2023",
+      "hours_open": 18322.0,
+      "programs": 2222.0,
+      "program_attendance": 20850.0,
+      "annual_in_person_visits": 239030.0
+    },
+    {
+      "region": "Annapolis Valley Regional Library",
+      "year": "2023-2024",
+      "hours_open": 18230.0,
+      "programs": 2291.0,
+      "program_attendance": 32893.0,
+      "annual_in_person_visits": 249771.0
+    },
+    {
+      "region": "Annapolis Valley Regional Library",
+      "year": "2024-2025",
+      "hours_open": 18534.75,
+      "programs": 1864.0,
+      "program_attendance": 26191.0,
+      "annual_in_person_visits": 209025.0
+    },
+    {
+      "region": "Cape Breton Regional Library",
+      "year": "2019-2020",
+      "hours_open": 20546.5,
+      "programs": 2502.0,
+      "program_attendance": 32460.0,
+      "annual_in_person_visits": 209857.0
+    },
+    {
+      "region": "Cape Breton Regional Library",
+      "year": "2020-2021",
+      "hours_open": 16142.75,
+      "programs": 1009.0,
+      "program_attendance": 21193.0,
+      "annual_in_person_visits": 134735.0
+    },
+    {
+      "region": "Cape Breton Regional Library",
+      "year": "2021-2022",
+      "hours_open": 19363.5,
+      "programs": 1426.0,
+      "program_attendance": 32949.0,
+      "annual_in_person_visits": 175415.0
+    },
+    {
+      "region": "Cape Breton Regional Library",
+      "year": "2022-2023",
+      "hours_open": 21746.0,
+      "programs": 2937.0,
+      "program_attendance": 41669.0,
+      "annual_in_person_visits": 248108.0
+    },
+    {
+      "region": "Cape Breton Regional Library",
+      "year": "2023-2024",
+      "hours_open": 21708.75,
+      "programs": 3009.0,
+      "program_attendance": 50629.0,
+      "annual_in_person_visits": 278261.0
+    },
+    {
+      "region": "Cape Breton Regional Library",
+      "year": "2024-2025",
+      "hours_open": 21683.0,
+      "programs": 2974.0,
+      "program_attendance": 49261.0,
+      "annual_in_person_visits": 294452.0
+    },
+    {
+      "region": "Colchester-East Hants Public Library",
+      "year": "2019-2020",
+      "hours_open": 7906.0,
+      "programs": 1495.0,
+      "program_attendance": 23189.0,
+      "annual_in_person_visits": 230439.0
+    },
+    {
+      "region": "Colchester-East Hants Public Library",
+      "year": "2020-2021",
+      "hours_open": 5584.0,
+      "programs": 650.0,
+      "program_attendance": 8529.0,
+      "annual_in_person_visits": 74733.0
+    },
+    {
+      "region": "Colchester-East Hants Public Library",
+      "year": "2021-2022",
+      "hours_open": 7078.0,
+      "programs": 1016.0,
+      "program_attendance": 19159.0,
+      "annual_in_person_visits": 110064.0
+    },
+    {
+      "region": "Colchester-East Hants Public Library",
+      "year": "2022-2023",
+      "hours_open": 8256.5,
+      "programs": 1733.0,
+      "program_attendance": 27654.0,
+      "annual_in_person_visits": 203141.0
+    },
+    {
+      "region": "Colchester-East Hants Public Library",
+      "year": "2023-2024",
+      "hours_open": 8086.5,
+      "programs": 2328.0,
+      "program_attendance": 35458.0,
+      "annual_in_person_visits": 225470.0
+    },
+    {
+      "region": "Colchester-East Hants Public Library",
+      "year": "2024-2025",
+      "hours_open": 8288.0,
+      "programs": 2319.0,
+      "program_attendance": 36449.0,
+      "annual_in_person_visits": 234468.0
+    },
+    {
+      "region": "Cumberland Public Libraries",
+      "year": "2019-2020",
+      "hours_open": 9126.0,
+      "programs": 611.0,
+      "program_attendance": 11141.0,
+      "annual_in_person_visits": 101244.0
+    },
+    {
+      "region": "Cumberland Public Libraries",
+      "year": "2020-2021",
+      "hours_open": 3935.0,
+      "programs": 315.0,
+      "program_attendance": 5883.0,
+      "annual_in_person_visits": 27475.0
+    },
+    {
+      "region": "Cumberland Public Libraries",
+      "year": "2021-2022",
+      "hours_open": 6742.0,
+      "programs": 247.0,
+      "program_attendance": 6906.0,
+      "annual_in_person_visits": 43068.0
+    },
+    {
+      "region": "Cumberland Public Libraries",
+      "year": "2022-2023",
+      "hours_open": 9486.5,
+      "programs": 406.0,
+      "program_attendance": 8397.0,
+      "annual_in_person_visits": 58197.0
+    },
+    {
+      "region": "Cumberland Public Libraries",
+      "year": "2023-2024",
+      "hours_open": 10225.0,
+      "programs": 559.0,
+      "program_attendance": 8367.0,
+      "annual_in_person_visits": 66918.0
+    },
+    {
+      "region": "Cumberland Public Libraries",
+      "year": "2024-2025",
+      "hours_open": 10246.5,
+      "programs": 571.0,
+      "program_attendance": 11703.0,
+      "annual_in_person_visits": 69261.0
+    },
+    {
+      "region": "Eastern Counties Regional Library",
+      "year": "2019-2020",
+      "hours_open": 12803.5,
+      "programs": 510.0,
+      "program_attendance": 4488.0,
+      "annual_in_person_visits": 44173.0
+    },
+    {
+      "region": "Eastern Counties Regional Library",
+      "year": "2020-2021",
+      "hours_open": 2032.5,
+      "programs": 1.0,
+      "program_attendance": 34.0,
+      "annual_in_person_visits": 1446.0
+    },
+    {
+      "region": "Eastern Counties Regional Library",
+      "year": "2021-2022",
+      "hours_open": 8457.25,
+      "programs": 34.0,
+      "program_attendance": 904.0,
+      "annual_in_person_visits": 12365.0
+    },
+    {
+      "region": "Eastern Counties Regional Library",
+      "year": "2022-2023",
+      "hours_open": 13040.5,
+      "programs": 169.0,
+      "program_attendance": 1149.0,
+      "annual_in_person_visits": 25513.0
+    },
+    {
+      "region": "Eastern Counties Regional Library",
+      "year": "2023-2024",
+      "hours_open": 14226.75,
+      "programs": 631.0,
+      "program_attendance": 3928.0,
+      "annual_in_person_visits": 31012.0
+    },
+    {
+      "region": "Eastern Counties Regional Library",
+      "year": "2024-2025",
+      "hours_open": 15088.0,
+      "programs": 717.0,
+      "program_attendance": 4573.0,
+      "annual_in_person_visits": 31794.0
+    },
+    {
+      "region": "Halifax Public Libraries",
+      "year": "2019-2020",
+      "hours_open": 35890.0,
+      "programs": 9432.0,
+      "program_attendance": 221409.0,
+      "annual_in_person_visits": 3425342.0
+    },
+    {
+      "region": "Halifax Public Libraries",
+      "year": "2020-2021",
+      "hours_open": 20682.0,
+      "programs": 1596.0,
+      "program_attendance": 47470.0,
+      "annual_in_person_visits": 1012677.0
+    },
+    {
+      "region": "Halifax Public Libraries",
+      "year": "2021-2022",
+      "hours_open": 31088.25,
+      "programs": 4511.0,
+      "program_attendance": 111852.0,
+      "annual_in_person_visits": 1391594.0
+    },
+    {
+      "region": "Halifax Public Libraries",
+      "year": "2022-2023",
+      "hours_open": 38191.5,
+      "programs": 10005.0,
+      "program_attendance": 290249.0,
+      "annual_in_person_visits": 2277255.0
+    },
+    {
+      "region": "Halifax Public Libraries",
+      "year": "2023-2024",
+      "hours_open": 37452.5,
+      "programs": 10863.0,
+      "program_attendance": 337419.0,
+      "annual_in_person_visits": 2493988.0
+    },
+    {
+      "region": "Halifax Public Libraries",
+      "year": "2024-2025",
+      "hours_open": 37227.0,
+      "programs": 9646.0,
+      "program_attendance": 392959.0,
+      "annual_in_person_visits": 2840856.0
+    },
+    {
+      "region": "Pictou-Antigonish Regional Library",
+      "year": "2019-2020",
+      "hours_open": 13450.0,
+      "programs": 2414.0,
+      "program_attendance": 25573.0,
+      "annual_in_person_visits": 320561.0
+    },
+    {
+      "region": "Pictou-Antigonish Regional Library",
+      "year": "2020-2021",
+      "hours_open": 9585.0,
+      "programs": 760.0,
+      "program_attendance": 11035.0,
+      "annual_in_person_visits": 138538.0
+    },
+    {
+      "region": "Pictou-Antigonish Regional Library",
+      "year": "2021-2022",
+      "hours_open": 11000.25,
+      "programs": 1036.0,
+      "program_attendance": 18158.0,
+      "annual_in_person_visits": 172086.0
+    },
+    {
+      "region": "Pictou-Antigonish Regional Library",
+      "year": "2022-2023",
+      "hours_open": 14277.5,
+      "programs": 1793.0,
+      "program_attendance": 25281.0,
+      "annual_in_person_visits": 270749.0
+    },
+    {
+      "region": "Pictou-Antigonish Regional Library",
+      "year": "2023-2024",
+      "hours_open": 14316.0,
+      "programs": 1883.0,
+      "program_attendance": 23142.0,
+      "annual_in_person_visits": 294962.0
+    },
+    {
+      "region": "Pictou-Antigonish Regional Library",
+      "year": "2024-2025",
+      "hours_open": 14634.25,
+      "programs": 1753.0,
+      "program_attendance": 23920.0,
+      "annual_in_person_visits": 337345.0
+    },
+    {
+      "region": "South Shore Public Libraries",
+      "year": "2019-2020",
+      "hours_open": 8131.0,
+      "programs": 2005.0,
+      "program_attendance": 14374.0,
+      "annual_in_person_visits": 186860.0
+    },
+    {
+      "region": "South Shore Public Libraries",
+      "year": "2020-2021",
+      "hours_open": 6977.75,
+      "programs": 1130.0,
+      "program_attendance": 5324.0,
+      "annual_in_person_visits": 72959.0
+    },
+    {
+      "region": "South Shore Public Libraries",
+      "year": "2021-2022",
+      "hours_open": 7750.5,
+      "programs": 1201.0,
+      "program_attendance": 5561.0,
+      "annual_in_person_visits": 103966.0
+    },
+    {
+      "region": "South Shore Public Libraries",
+      "year": "2022-2023",
+      "hours_open": 9206.25,
+      "programs": 1659.0,
+      "program_attendance": 8768.0,
+      "annual_in_person_visits": 154073.0
+    },
+    {
+      "region": "South Shore Public Libraries",
+      "year": "2023-2024",
+      "hours_open": 8825.5,
+      "programs": 2014.0,
+      "program_attendance": 13535.0,
+      "annual_in_person_visits": 165282.0
+    },
+    {
+      "region": "South Shore Public Libraries",
+      "year": "2024-2025",
+      "hours_open": 8590.25,
+      "programs": 1884.0,
+      "program_attendance": 14244.0,
+      "annual_in_person_visits": 156896.0
+    },
+    {
+      "region": "Western Counties Regional Library",
+      "year": "2019-2020",
+      "hours_open": 12669.5,
+      "programs": 1551.0,
+      "program_attendance": 11015.0,
+      "annual_in_person_visits": 125672.0
+    },
+    {
+      "region": "Western Counties Regional Library",
+      "year": "2020-2021",
+      "hours_open": 10139.25,
+      "programs": 583.0,
+      "program_attendance": 5465.0,
+      "annual_in_person_visits": 42095.0
+    },
+    {
+      "region": "Western Counties Regional Library",
+      "year": "2021-2022",
+      "hours_open": 11364.5,
+      "programs": 651.0,
+      "program_attendance": 7574.0,
+      "annual_in_person_visits": 114970.0
+    },
+    {
+      "region": "Western Counties Regional Library",
+      "year": "2022-2023",
+      "hours_open": 13035.0,
+      "programs": 958.0,
+      "program_attendance": 7350.0,
+      "annual_in_person_visits": 169222.0
+    },
+    {
+      "region": "Western Counties Regional Library",
+      "year": "2023-2024",
+      "hours_open": 13058.0,
+      "programs": 1160.0,
+      "program_attendance": 10097.0,
+      "annual_in_person_visits": 159984.0
+    },
+    {
+      "region": "Western Counties Regional Library",
+      "year": "2024-2025",
+      "hours_open": 12806.5,
+      "programs": 1232.0,
+      "program_attendance": 12292.0,
+      "annual_in_person_visits": 171259.0
+    }
+  ],
+  "count": 54,
+  "coverage": "NS 2019-2020 to 2024-2025 · Vancouver 2023–24",
+  "retrieved": "2026-11-19"
+}

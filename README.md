@@ -1,115 +1,22 @@
-# CoolCode browser tool template
+# Library Workbench
 
-A starting point for independent tools at `coolcode.ca/<repo>/`: a working local-text
-example, responsive UI, Python standard-library build, Node tests, PR checks and Pages
-publication. No npm install is needed.
+[Open the workbench](https://coolcode.ca/libraryworkbench/)
 
-## Using the example
+Pick a project such as transferring a VHS tape. See which equipment the central libraries in Halifax and Vancouver describe, what to bring, and where the library takes bookings. Historical use and attendance sit beside the practical directory.
 
 <!-- coolcode:guide -->
-The first occurrence of each trimmed line keeps its place. Compare the output with the original text before copying the result.
+Choose a recording or digitization task to see the equipment, what to bring, and the official booking route in each city. Switch between Vancouver labs to compare 2023 and 2024 sessions or hours. In the Nova Scotia survey, choose Halifax in 2024–25 to put opening hours, programs and attendance alongside Halifax’s annual report and download a data-request draft about the different counts.
 <!-- /coolcode:guide -->
 
-For a real tool, replace this paragraph with one or two plain-text sentences
-about an example, a limit or how to interpret the results. Keep the source,
-coverage, refresh behaviour and a worked example in this README as appropriate.
-When updating a tool, revise any details its behaviour has changed and keep the
-homepage's shorter data-source sentence in `tool.json` accurate.
-The hub imports the marked note into the catalogue README.
+## Sources and interpretation
 
-## One-time template setup
+- The [Vancouver Inspiration Lab](https://www.vpl.ca/branches/central/level-3/inspiration-lab) lists equipment and links to its booking services. The [video transfer guide](https://www.vpl.ca/guides/inspiration-lab-digitization/video-digitization) explains real-time copying and camcorder connections. [Halifax Central’s Media Studio](https://www.halifaxpubliclibraries.ca/library-spaces/book-a-space/media-studio/) describes its digitization cart and booking requirements. The practical entries are curated summaries. Follow the library’s booking link to confirm current availability and equipment suitability.
+- [Vancouver Public Library Annual Statistics 2024](https://www.vpl.ca/sites/default/files/2025-04/VPL%20Annual%20Statistics%202024%20FINAL.pdf#page=12), printed p. 11, reports hours of use and sessions at Central and Bud Osborn for calendar years 2023 and 2024. The report attributes the Central studios’ 2023 zero to closure. Stations combine digitization and creation. A station session can cover many types of work.
+- [Nova Scotia regional library statistics](https://data.novascotia.ca/d/tnu4-55e9) supply fiscal-year totals for each reporting system. A blank measure stays unreported. Programs and attendances can include in-person, self-directed and virtual activities. Attendance counts participations.
+- [Halifax Public Libraries’ annual report](https://www2.halifaxpubliclibraries.ca/archives/annual-reports/2024-25/Annual-Report-2024-25-Infographic-11x7.25-DEC2025_Digital.pdf) reports 37,227 opening hours, 10,063 programs/events and 229,035 participants in 2024–25. The provincial Halifax row reports 37,227 hours, 9,646 programs and 392,959 attendances. The two publications give no reconciliation. The downloadable [request draft](web/halifax-data-request.txt) asks about their definitions and a recurring aggregate export.
 
-Enable **Settings → General → Template repository** here. This repository does not
-need Pages enabled: its workflow builds/tests but intentionally skips deployment.
-New copies also skip deployment until `scripts/init.py` sets the tool ID to match
-their repository name. This lets you create the repo before configuring Pages.
+## Refresh and development
 
-## Start a new tool
+The monthly workflow downloads the current provincial survey, checks region-year uniqueness, preserves missing measures and checks the fingerprints of the two reviewed report PDFs before publishing. The retrieval date applies to these data sources. Equipment summaries are reviewed separately when a library changes a service. Neither user selections nor bookings are submitted by this tool. Booking links open the relevant library.
 
-1. Select **Use this template → Create a new repository**, choose owner `jsdyer`,
-   a unique lowercase name such as `my-tool`, and public visibility.
-2. Clone the new repository. Use Python 3.12+ and Node 24+.
-3. Set the identity, using a slug that matches the repository name:
-
-```sh
-python3 scripts/init.py my-tool --title "My Tool" --description "Describe what this tool does."
-```
-
-Review the category, tags and icon in `tool.json`. `access: "browser"` tells the main
-catalogue that the tool works immediately without installation. `--owner` supports a different
-GitHub owner, but only projects owned by `jsdyer` inherit the CoolCode domain.
-
-4. Replace the example in `web/` and its tests. Update the privacy explanation,
-   source attribution and README to describe the real tool.
-5. Test and preview:
-
-```sh
-node --test tests/*.test.mjs
-python3 -m unittest discover -s tests -v
-python3 scripts/build.py
-python3 -m http.server 8000 --directory dist
-```
-
-Open `http://localhost:8000/`. The example trims lines, skips blanks and removes exact
-duplicates, preserving first-seen order and capitalization. It makes no API requests
-and does not persist text. Update that explanation if your app behaves differently.
-
-CI also tests the browser flow and mobile layout at a project subpath. Replace the
-sample assertions in `tests/browser_smoke.py` when implementing your own UI. To run
-that check locally (optional for ordinary preview):
-
-```sh
-python3 -m venv .venv
-. .venv/bin/activate
-python3 -m pip install -r tests/browser-requirements.txt
-python3 -m playwright install --with-deps chromium
-python3 tests/browser_smoke.py
-```
-
-Playwright is a test-only dependency; the app and its static build do not use it.
-
-## Publish and register
-
-When the actual tool is ready, in the **new tool repository** set **Settings → Pages → Build and deployment →
-Source → GitHub Actions**. Push to `main`, or manually run **Browser tool · Check and
-publish** after enabling Pages. If the initial deployment ran before Pages was enabled,
-enable it and rerun. PRs only check/build and provide a downloadable preview artifact.
-
-Keep asset paths and module imports relative. Check `https://coolcode.ca/my-tool/`.
-Do not add a CNAME or set `coolcode.ca` as this project's custom domain; the account
-site supplies it. Only successful `main` builds deploy.
-
-After verifying the app, copy the reviewed object from `tool.json` into `data/tools.json`
-in [the main site](https://github.com/jsdyer/jsdyer.github.io). Each tool still builds
-independently. Update the hub record when listing metadata changes; the hub is the
-authority for discovery. Ordinary app updates touch only this repository.
-
-The main site separates **Use in your browser** from **Install yourself**. An app
-that asks for a file is still a browser tool. Standalone Linux packages should start
-in their own repositories with their own build/release workflow, rather than copying
-this browser-only scaffold. Their hub record uses `access: "install"`, links to an
-installation guide, and includes `requirements`.
-
-## Files
-
-| Path | Purpose |
-| --- | --- |
-| `tool.json` | Page metadata and a ready-to-copy catalogue record |
-| `web/` | HTML, responsive CSS, DOM interactions and separate model logic |
-| `scripts/build.py` | Escape metadata and build `web/` into `dist/` |
-| `scripts/init.py` | Set a new project's identity |
-| `tests/` | Application and builder tests |
-| `.github/workflows/pages.yml` | Check PRs and publish successful main builds |
-| `AGENTS.md` | Instructions for future coding work |
-
-Namespace optional storage as `coolcode:<tool-id>:<key>`; CoolCode paths share a
-browser origin. Don't save pasted text/uploads by default. Document external APIs
-and send only the information needed for the selected action. Never embed secrets.
-
-Scheduled refresh is opt-in. Validate source data before deploying, display its date,
-and preserve the last good deployment on failure. Public-repository schedules can
-stop after 60 days without repository activity.
-
-Templates don't propagate future edits automatically. Adopt fixes explicitly and
-consider a versioned reusable workflow once several tools confirm the shared process.
-Choose and add the intended software license before distributing a new project.
+Run `python3 scripts/refresh.py` to retrieve data, `node --test tests/*.test.mjs` and `python3 -m unittest discover -s tests` to check it, then `python3 scripts/build.py` to build offline. Serve `dist/` locally. With Playwright Chromium installed, `python3 tests/browser_smoke.py` exercises the deployed layout.

@@ -1,0 +1,143 @@
+{
+  "services": [
+    {
+      "city": "Vancouver",
+      "task": "VHS tape",
+      "equipment": "The lab supplies a VCR for North American NTSC VHS.",
+      "bring": "Bring the tape and storage. Allow its running time plus setup and saving time. VPL recommends exFAT for individual files over 4 GB.",
+      "guide": "https://www.vpl.ca/guides/inspiration-lab-digitization/video-digitization",
+      "booking": "https://www.vpl.ca/branches/central/level-3/inspiration-lab"
+    },
+    {
+      "city": "Halifax",
+      "task": "VHS tape",
+      "equipment": "Central Library’s digitization cart converts VHS tapes. The equipment page does not specify NTSC/PAL or compact adapters.",
+      "bring": "Bring your tape and physical library card. Ask about your exact format and file storage when requesting the cart.",
+      "guide": "https://www.halifaxpubliclibraries.ca/library-spaces/book-a-space/media-studio/",
+      "booking": "https://www.halifaxpubliclibraries.ca/library-spaces/book-a-space/media-studio/booking-request-form/"
+    },
+    {
+      "city": "Vancouver",
+      "task": "Camcorder tape",
+      "equipment": "Staff have MiniDV and 8 mm camcorder kits. The capture connection also accepts RCA or S-Video from a compatible camera.",
+      "bring": "Bring the tape and storage. If using your camera, bring its power supply and connecting cables.",
+      "guide": "https://www.vpl.ca/guides/inspiration-lab-digitization/video-digitization",
+      "booking": "https://www.vpl.ca/branches/central/level-3/inspiration-lab"
+    },
+    {
+      "city": "Vancouver",
+      "task": "Audio cassette",
+      "equipment": "Central’s audio digitization station plays cassettes.",
+      "bring": "Bring your cassette and storage for your digital copy.",
+      "guide": "https://www.vpl.ca/guides/inspiration-lab-digitization/audio-digitization",
+      "booking": "https://www.vpl.ca/branches/central/level-3/inspiration-lab"
+    },
+    {
+      "city": "Halifax",
+      "task": "Audio cassette",
+      "equipment": "Central’s digitization cart can transfer audio cassettes.",
+      "bring": "Bring your cassette and physical library card. Include the format in your booking request.",
+      "guide": "https://www.halifaxpubliclibraries.ca/library-spaces/book-a-space/media-studio/",
+      "booking": "https://www.halifaxpubliclibraries.ca/library-spaces/book-a-space/media-studio/booking-request-form/"
+    },
+    {
+      "city": "Halifax",
+      "task": "Vinyl record",
+      "equipment": "Central’s digitization cart can transfer records.",
+      "bring": "Bring the record and physical library card. Ask staff about the file output and storage you need.",
+      "guide": "https://www.halifaxpubliclibraries.ca/library-spaces/book-a-space/media-studio/",
+      "booking": "https://www.halifaxpubliclibraries.ca/library-spaces/book-a-space/media-studio/booking-request-form/"
+    },
+    {
+      "city": "Vancouver",
+      "task": "Photo, slide or negative",
+      "equipment": "The Inspiration Lab provides an Epson flatbed scanning station.",
+      "bring": "Bring the originals and storage. Consult the image guide for holders and supported film sizes.",
+      "guide": "https://www.vpl.ca/guides/inspiration-lab-digitization/photo-and-image-digitization",
+      "booking": "https://www.vpl.ca/branches/central/level-3/inspiration-lab"
+    },
+    {
+      "city": "Vancouver",
+      "task": "Record audio",
+      "equipment": "Book a sound booth at Central. The booking page describes the equipment in each room.",
+      "bring": "Choose your booth and bring storage for your recording.",
+      "guide": "https://www.vpl.ca/branches/central/level-3/inspiration-lab",
+      "booking": "https://www.vpl.ca/branches/central/level-3/inspiration-lab"
+    },
+    {
+      "city": "Halifax",
+      "task": "Record audio",
+      "equipment": "Central’s Media Studio offers recording space, microphones and audio editing software.",
+      "bring": "Bring your physical library card. Watch the orientation videos before your first session.",
+      "guide": "https://www.halifaxpubliclibraries.ca/library-spaces/book-a-space/media-studio/",
+      "booking": "https://www.halifaxpubliclibraries.ca/library-spaces/book-a-space/media-studio/booking-request-form/"
+    }
+  ],
+  "labs": [
+    {
+      "lab": "Central",
+      "activity": "Recording studios",
+      "year": 2023,
+      "hours": 0,
+      "sessions": 0
+    },
+    {
+      "lab": "Central",
+      "activity": "Recording studios",
+      "year": 2024,
+      "hours": 10499,
+      "sessions": 4483
+    },
+    {
+      "lab": "Central",
+      "activity": "Digitization / creation stations",
+      "year": 2023,
+      "hours": 16385,
+      "sessions": 11795
+    },
+    {
+      "lab": "Central",
+      "activity": "Digitization / creation stations",
+      "year": 2024,
+      "hours": 18065,
+      "sessions": 12371
+    },
+    {
+      "lab": "Bud Osborn",
+      "activity": "Recording studios",
+      "year": 2023,
+      "hours": 279,
+      "sessions": 245
+    },
+    {
+      "lab": "Bud Osborn",
+      "activity": "Recording studios",
+      "year": 2024,
+      "hours": 633,
+      "sessions": 375
+    },
+    {
+      "lab": "Bud Osborn",
+      "activity": "Digitization / creation stations",
+      "year": 2023,
+      "hours": 699,
+      "sessions": 737
+    },
+    {
+      "lab": "Bud Osborn",
+      "activity": "Digitization / creation stations",
+      "year": 2024,
+      "hours": 582,
+      "sessions": 346
+    }
+  ],
+  "hpl": {
+    "year": "2024-2025",
+    "hours_open": 37227,
+    "programs": 10063,
+    "program_attendance": 229035
+  },
+  "vplSource": "https://www.vpl.ca/sites/default/files/2025-04/VPL%20Annual%20Statistics%202024%20FINAL.pdf#page=12",
+  "hplSource": "https://www2.halifaxpubliclibraries.ca/archives/annual-reports/2024-25/Annual-Report-2024-25-Infographic-11x7.25-DEC2025_Digital.pdf",
+  "nsSource": "https://data.novascotia.ca/d/tnu4-55e9"
+}

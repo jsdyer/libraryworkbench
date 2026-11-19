@@ -1,21 +1,16 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { cleanLines } from '../web/model.mjs';
-test('trims, removes blanks and preserves first-seen order', () => {
-  assert.deepEqual(cleanLines('  Halifax\nLangley\nHalifax\n\nVancouver  '), {
-    text: 'Halifax\nLangley\nVancouver', count: 3, removed: 1,
-  });
+import {readFileSync} from 'node:fs';
+import {labRows,servicesFor,surveyComparison} from '../web/model.mjs';
+const data = JSON.parse(readFileSync(new URL('../web/data/edition.json',import.meta.url)));
+test('Source counts and closure are preserved',()=>{
+  assert.deepEqual(labRows(data.labs,'Central','sessions')[0],{activity:'Recording studios',earlier:0,later:4483,change:4483});
+  const {survey,annual}=surveyComparison(data,'Halifax Public Libraries','2024-2025');
+  assert.equal(annual.hours_open,37227); assert.equal(survey.hours_open,annual.hours_open);
+  assert.equal(annual.program_attendance,229035);
+  assert.equal(surveyComparison(data,'Halifax Public Libraries','2023-2024').annual,null);
 });
-test('supports Windows and old Mac line endings', () => {
-  assert.equal(cleanLines('a\r\nb\ra').text, 'a\nb');
+test('City and equipment filters combine',()=>{
+  assert.equal(servicesFor(data.services,'VHS tape','Both cities').length,2);
+  assert.equal(servicesFor(data.services,'Camcorder tape','Halifax').length,0);
 });
-test('empty text and whitespace produce an empty result', () => {
-  assert.deepEqual(cleanLines(' \n\t'), { text: '', count: 0, removed: 0 });
-});
-test('preserves case and Unicode', () => {
-  assert.equal(cleanLines('Québec\nquébec\n東京\nQuébec').text, 'Québec\nquébec\n東京');
-});
-test('treats markup as ordinary text', () => {
-  assert.equal(cleanLines('<script>alert(1)</script>\n<script>alert(1)</script>').text, '<script>alert(1)</script>');
-});
-test('rejects non-text input', () => { assert.throws(() => cleanLines(null), TypeError); });
