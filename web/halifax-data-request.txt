@@ -6,9 +6,9 @@ I’m using Halifax’s public library statistics in CoolCode’s Library Workbe
 
 For April 1, 2024 to March 31, 2025, Halifax Public Libraries’ annual report and the provincial survey both give 37,227 opening hours. The annual report lists 10,063 programs and events and 229,035 attendees. The provincial Halifax row lists 9,646 programs and 392,959 program attendances. The provincial definitions include in-person, self-directed and virtual programs.
 
-Could you point me to the definitions or reporting notes used for each set of totals? In particular, how are multi-session events, self-directed activities, online attendance and estimated attendance counted? Were either of the published figures revised after the other was prepared?
+Could you point me to the definitions or reporting notes used for each set of totals? In particular, how are multi-session events, self-directed activities, online attendance and estimated attendance counted? Was either set of published figures revised after the other was prepared?
 
-If an existing annual summary breaks the counts down by category, a copy or public link would help me explain the difference. Aggregate counts are sufficient. Please let me know how the source should be credited and whether CoolCode may reproduce the summary. A written reply would be appreciated.
+If an existing annual summary breaks the counts down by category, a copy or public link would help me explain the difference. Aggregate counts are sufficient. If this summary is already produced each year, is there a recurring public CSV or a distribution list CoolCode could use for future editions? Please let me know how the source should be credited and whether CoolCode may reproduce the summary. A written reply would be appreciated.
 
 Thank you.
 
