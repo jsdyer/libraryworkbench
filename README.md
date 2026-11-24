@@ -28,3 +28,11 @@ The [tape planner](https://coolcode.ca/libraryworkbench/#tape-planner) compares 
 The monthly workflow downloads the current provincial survey, checks region-year uniqueness, preserves missing measures and checks the fingerprints of the two reviewed report PDFs before publishing. The catalogue date tracks the survey pull. A report that blocks a scheduled download or changes its content keeps its last verified date and a visible status in the corresponding section. Its reviewed figures remain available while the survey updates independently. Equipment summaries are reviewed separately when a library changes a service. Neither user selections nor bookings are submitted by this tool. Booking links open the relevant library.
 
 Run `python3 scripts/refresh.py` to retrieve data, `node --test tests/*.test.mjs` and `python3 -m unittest discover -s tests` to check it, then `python3 scripts/build.py` to build offline. Serve `dist/` locally. With Playwright Chromium installed, `python3 tests/browser_smoke.py` exercises the deployed layout.
+
+<!-- schedule-reliability -->
+## Schedule reliability
+
+Public GitHub repositories can have scheduled workflows disabled after 60 days of inactivity. A separate weekly [schedule guard](.github/workflows/schedule-guard.yml) calls GitHub's enable-workflow API for an explicit list of refresh workflows and itself. It can restore workflows disabled for inactivity, preserves manually disabled workflows, and runs independently of collection failures.
+
+This is an interim mitigation, not a scheduling guarantee: GitHub does not document active-workflow renewal as a permanent exemption, and scheduled runs can be delayed or dropped. A scheduler on our own Linux server is the planned independent trigger. The guard does not collect data, create dummy commits, or change source/check timestamps; successful collection and published data freshness still need monitoring.
+<!-- /schedule-reliability -->
