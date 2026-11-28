@@ -145,6 +145,26 @@
       "guide": "https://www.yourlibrary.ca/creation-stations/",
       "booking": "https://www.yourlibrary.ca/creation-stations/help1on1/",
       "action": "Request one-on-one help"
+    },
+    {
+      "city": "Oakville",
+      "task": "3D print",
+      "facility": "Oakville Public Library branches",
+      "equipment": "Print a PLA model on an Ultimaker 2+ Connect. Regular appointments last three hours.",
+      "bring": "Complete the certification, bring your library card and have staff review your slice settings and weight. The guide explains how to reserve a longer appointment.",
+      "guide": "https://opl.ca/library-services/technology/3d-printing",
+      "booking": "https://opl.ca/library-services/technology/3d-printing",
+      "action": "Booking instructions"
+    },
+    {
+      "city": "Toronto",
+      "task": "3D print",
+      "facility": "Digital Innovation Hubs",
+      "equipment": "Most bookings allow two hours including preparation. Each hub also has a printer for longer jobs.",
+      "bring": "Bring your Toronto Public Library card. Call a participating branch to reserve. Staff must approve and start the print.",
+      "guide": "https://tpl.ca/using-the-library/computer-services/digital-innovation-services/3d-printers/",
+      "booking": "https://tpl.ca/using-the-library/computer-services/digital-innovation-services/3d-printers/",
+      "action": "Find participating branches"
     }
   ],
   "labs": [

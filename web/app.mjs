@@ -9,8 +9,13 @@ load(data => {
     const record = data.documents?.find(doc => doc.url === url.split('#')[0]);
     if (record) $(id).textContent = 'Report last verified ' + record.verified + ' · ' + record.status;
   }
+  for (const city of ['oakville', 'toronto']) {
+    const guide = $(city + '-guide').href;
+    const check = data.documents?.find(doc => doc.url === guide);
+    if (check) $(city + '-status').textContent = 'Rate and booking rules last verified ' + check.verified + ' · ' + check.status;
+  }
   options('task', [...new Set(data.services.map(row => row.task))], 'VHS tape');
-  options('city', ['All locations','Halifax','Richmond','Vancouver']);
+  options('city', ['All locations', ...new Set(data.services.map(row => row.city).sort())]);
   options('lab', ['Central','Bud Osborn']);
   options('measure', ['Hours of use','Sessions','Minutes per session']);
   const regions = [...new Set(data.survey.map(row => row.region))].sort();
@@ -21,7 +26,8 @@ load(data => {
     $('services').replaceChildren(...results.map(r => {
       const box = node('article', undefined, 'card');
       const links = node('div', undefined, 'links');
-      links.append(link('Equipment guide ↗', r.guide), link((r.action || 'Booking at the library') + ' ↗', r.booking));
+      if (r.guide !== r.booking) links.append(link('Equipment guide ↗', r.guide));
+      links.append(link((r.action || 'Booking at the library') + ' ↗', r.booking));
       box.append(node('p',r.city,'minitag'),node('h3', r.facility || (r.city === 'Vancouver' ? 'Central Inspiration Lab' : 'Central Media Studio')),node('p',r.equipment),node('p',r.bring),links);
       return box;
     }));
@@ -31,6 +37,10 @@ load(data => {
     const plan = printPlan($('print-minutes').value, $('print-grams').value);
     const currency = value => value.toLocaleString('en-CA',{style:'currency',currency:'CAD'});
     $('halifax-fit').textContent = !plan ? 'Enter a positive time and weight' : plan.halifax ? 'Within the published time limit' : 'Exceeds the under-two-hour limit';
+    $('oakville-fit').textContent = !plan ? 'Waiting for an estimate' : plan.oakvilleRegular ? 'Within a three-hour appointment' : 'Ask the branch about a longer appointment';
+    $('oakville-price').textContent = plan ? 'Estimated CAD ' + currency(plan.oakvilleCost) + ' before HST.' : '';
+    $('toronto-fit').textContent = !plan ? 'Waiting for an estimate' : plan.torontoRegular ? 'Allow time for setup within two hours' : 'Ask for a longer-print booking';
+    $('toronto-price').textContent = plan ? 'Estimated CAD ' + currency(plan.torontoCost) + ' in filament charges.' : '';
     $('richmond-fit').textContent = !plan ? 'Waiting for an estimate' : plan.richmond || 'Exceeds both printer limits';
     $('richmond-price').textContent = plan?.richmond
       ? 'Estimated CAD ' + currency(plan.cost) + ' = $2 service fee + ' + currency(plan.material) + ' filament + ' + currency(plan.time) + ' printing time. Partial hours are prorated here. Confirm the actual charge with the library.'

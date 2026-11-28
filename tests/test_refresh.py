@@ -6,7 +6,7 @@ from unittest.mock import patch
 from urllib.error import HTTPError
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from refresh import check_document
+from refresh import check_document, matches_source
 
 
 class ReportVerificationTests(unittest.TestCase):
@@ -31,3 +31,10 @@ class ReportVerificationTests(unittest.TestCase):
         result = self.check()
         self.assertEqual(result["verified"], self.last["verified"])
         self.assertIn("unavailable", result["status"])
+
+
+class PolicyVerificationTests(unittest.TestCase):
+    def test_matches_visible_terms_through_markup_and_spaces(self):
+        policy = {"required_text": ["$0.15 per gram", "two hours"]}
+        self.assertTrue(matches_source(policy, b"<p>$0.15 per&nbsp;<b>gram</b></p><p>TWO HOURS</p>"))
+        self.assertFalse(matches_source(policy, b"<p>$0.20 per gram. Two hours</p><script>$0.15 per gram</script>"))

@@ -45,3 +45,16 @@ test('Richmond estimates and the Halifax strict time limit', () => {
   assert.equal(printPlan(961,30).richmond,'');
   assert.equal(printPlan(-1,30),null);
 });
+
+test('Ontario print estimates respect regular bookings, Toronto setup time and the minimum charge', () => {
+  const example = printPlan(90,30);
+  assert.equal(example.oakvilleCost,3);
+  assert.equal(example.torontoCost,4.5);
+  assert.equal(printPlan(120,0.25).torontoCost,0.15);
+  assert.equal(printPlan(119,30).torontoRegular,true);
+  assert.equal(printPlan(120,30).torontoRegular,false);
+  assert.equal(printPlan(180,30).oakvilleRegular,true);
+  assert.equal(printPlan(181,30).oakvilleRegular,false);
+  assert.equal(servicesFor(data.services,'3D print','Oakville').length,1);
+  assert.equal(servicesFor(data.services,'3D print','Toronto').length,1);
+});

@@ -4,16 +4,18 @@
 <link rel="canonical" href="https://coolcode.ca/libraryworkbench/">
 </head>
 <body data-tool-id="{{TOOL_ID}}"><a class="skip" href="#main">Skip to content</a><header><a href="https://coolcode.ca/">← CoolCode</a><a href="{{SOURCE_URL}}">Source &amp; instructions ↗</a></header>
-<main id="main"><div class="mast"><div class="kicker">Halifax · Richmond · Vancouver</div><h1>{{TITLE}}</h1><p class="intro">{{DESCRIPTION}}</p><div class="meta" id="metadata">Loading source details…</div></div><noscript>Enable JavaScript to use the filters and comparisons.</noscript><p id="error" role="alert"></p>
+<main id="main"><div class="mast"><div class="kicker">Halifax · Oakville · Richmond · Toronto · Vancouver</div><h1>{{TITLE}}</h1><p class="intro">{{DESCRIPTION}}</p><div class="meta" id="metadata">Loading source details…</div></div><noscript>Enable JavaScript to use the filters and comparisons.</noscript><p id="error" role="alert"></p>
 <section><h2>What do you want to make?</h2>
 <div class="controls"><label>Project<select id="task"></select></label><label>Location<select id="city"></select></label></div>
 <div class="results" id="services" aria-live="polite"></div></section>
 <section id="print-planner"><h2>Can the library print my design?</h2>
-<p>Enter the time and filament weight reported by your slicer. Compare a print at Halifax Central with Richmond’s Brighouse Launchpad.</p>
+<p>Enter the time and filament weight reported by your slicer. Compare time limits and filament fees at four libraries in Nova Scotia, Ontario and B.C.</p>
 <div class="controls"><label>Print time (minutes)<input id="print-minutes" type="number" min="1" step="1" value="90"></label><label>Filament (grams)<input id="print-grams" type="number" min="0.01" step="any" value="30"></label></div>
 <div class="results" aria-live="polite"><article class="card"><p class="minitag">Halifax Central</p><h3 id="halifax-fit"></h3><p>The Lou Duggan Creative Studio describes free printing for jobs under two hours. Bring an STL model to a scheduled program and ask staff about the current service.</p><a href="https://www.halifaxpubliclibraries.ca/blogs/post/how-to-get-started-with-3d-printing/">Halifax printing guide ↗</a></article>
-<article class="card"><p class="minitag">Richmond Brighouse</p><h3 id="richmond-fit"></h3><p id="richmond-price"></p><a href="https://www.yourlibrary.ca/creation-stations/">Richmond rates, limits and training ↗</a></article></div>
-<p>Service information reviewed 19 November 2026. Each library decides whether it can accept a job.</p></section>
+<article class="card"><p class="minitag">Richmond Brighouse</p><h3 id="richmond-fit"></h3><p id="richmond-price"></p><a href="https://www.yourlibrary.ca/creation-stations/">Richmond rates, limits and training ↗</a></article>
+<article class="card"><p class="minitag">Oakville Public Library</p><h3 id="oakville-fit"></h3><p id="oakville-price"></p><p>Oakville charges $0.10 per gram of PLA plus HST. The usual appointment lasts three hours. Allow time for staff to review your settings and finish at least 30 minutes before closing.</p><a id="oakville-guide" href="https://opl.ca/library-services/technology/3d-printing">Oakville certification and bookings ↗</a><p class="meta" id="oakville-status"></p></article>
+<article class="card"><p class="minitag">Toronto Public Library</p><h3 id="toronto-fit"></h3><p id="toronto-price"></p><p>Toronto charges $0.15 per gram, with a $0.15 minimum. Most bookings allow two hours including file preparation. Call a Digital Innovation Hub to reserve a printer for a longer job.</p><a id="toronto-guide" href="https://tpl.ca/using-the-library/computer-services/digital-innovation-services/3d-printers/">Toronto locations and printing rules ↗</a><p class="meta" id="toronto-status"></p></article></div>
+<p>Halifax and Richmond print guidance reviewed 19 November 2026. Each library decides whether it can accept a job.</p></section>
 <section id="tape-planner"><h2>Plan a tape transfer in Vancouver</h2>
 <p>Read the format on the cassette or original camera. Check which Central Inspiration Lab station can play it, then estimate the time and storage for a batch of that format.</p>
 <div class="controls"><label>Tape format<select id="tape-format"></select></label><label>Video standard<select id="video-standard"></select></label>

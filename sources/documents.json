@@ -6,5 +6,23 @@
   {
     "url": "https://www2.halifaxpubliclibraries.ca/archives/annual-reports/2024-25/Annual-Report-2024-25-Infographic-11x7.25-DEC2025_Digital.pdf",
     "sha256": "609e82c5e9ab1c9017601d1f171308978fba3aa939937ac711f3a69fcc7ed51c"
+  },
+  {
+    "url": "https://opl.ca/library-services/technology/3d-printing",
+    "required_text": [
+      "$0.10 per gram of PLA (+HST)",
+      "appointments are 3 hours long",
+      "longer print appointments are assessed on a case-by-case basis"
+    ]
+  },
+  {
+    "url": "https://tpl.ca/using-the-library/computer-services/digital-innovation-services/3d-printers/",
+    "required_text": [
+      "$0.15 per one gram",
+      "minimum charge of $0.15",
+      "maximum of two hours",
+      "time includes file preparation",
+      "printer is available for longer prints"
+    ]
   }
 ]

@@ -1,7 +1,7 @@
 {
   "id": "libraryworkbench",
   "title": "Library Workbench",
-  "description": "Check whether a 3D print fits Halifax or Richmond library limits, estimate Richmond’s fee, or plan a Vancouver tape transfer.",
+  "description": "Compare library 3D printing times and costs in Halifax, Oakville, Richmond and Toronto, or plan a tape transfer in Vancouver.",
   "category": "places",
   "tags": [
     "libraries",
@@ -10,7 +10,10 @@
     "digitization",
     "program attendance",
     "Richmond",
-    "3D printing"
+    "3D printing",
+    "Oakville",
+    "Toronto",
+    "Ontario"
   ],
   "icon": "library-big",
   "url": "/libraryworkbench/",

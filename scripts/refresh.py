@@ -2,6 +2,7 @@
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from hashlib import sha256
+from html.parser import HTMLParser
 import json
 from pathlib import Path
 import re
@@ -24,6 +25,35 @@ def retrieve(url):
             sleep(2 ** attempt)
 
 
+class PageText(HTMLParser):
+    """Collect visible wording independently of inline tags and spacing."""
+    def __init__(self):
+        super().__init__()
+        self.parts = []
+        self.hidden = False
+
+    def handle_starttag(self, tag, attrs):
+        if tag in {"script", "style"}:
+            self.hidden = True
+
+    def handle_endtag(self, tag):
+        if tag in {"script", "style"}:
+            self.hidden = False
+
+    def handle_data(self, data):
+        if not self.hidden:
+            self.parts.append(data)
+
+
+def matches_source(source, raw):
+    if "sha256" in source:
+        return sha256(raw).hexdigest() == source["sha256"]
+    page = PageText()
+    page.feed(raw.decode("utf-8", errors="replace"))
+    visible = " ".join(" ".join(page.parts).casefold().split())
+    return all(phrase.casefold() in visible for phrase in source["required_text"])
+
+
 def check_document(source, previous, today):
     """Keep the latest known-good access date for a fixed, reviewed publication."""
     try:
@@ -33,7 +63,7 @@ def check_document(source, previous, today):
             raise
         print(f"Source unavailable ({error}): {source['url']}")
         return {**previous[source["url"]], "status": "Source unavailable on last check"}
-    if sha256(raw).hexdigest() != source["sha256"]:
+    if not matches_source(source, raw):
         if source["url"] not in previous:
             raise ValueError("Review this publication before including it: " + source["url"])
         print("Source changed. Check the published transcription: " + source["url"])
